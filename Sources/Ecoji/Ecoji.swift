@@ -1,11 +1,3 @@
-//
-//  Ecoji.swift
-//  lyrebird
-//
-//  Created by Robin Diddams on 3/27/19.
-//  Copyright © 2019 Robin Diddams. All rights reserved.
-//
-
 import Foundation
 
 // Adapted from https://github.com/keith-turner/ecoji/blob/master/docs/encoding.md
@@ -111,11 +103,6 @@ public class EcojiEncoder {
 public enum DecodingError: Error {
     case UnexpectedEndOfInput
     case InvalidCharacter(found: Character)
-}
-
-public enum Encoding {
-    case utf8
-    case binary
 }
 
 public class EcojiDecoder {

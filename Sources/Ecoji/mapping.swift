@@ -1,10 +1,4 @@
-//
-//  Mapping.swift
-//  lyrebird
-//
-//  Created by Robin Diddams on 3/27/19.
-//  Copyright © 2019 Robin Diddams. All rights reserved.
-//
+// Adapted from https://github.com/keith-turner/ecoji/blob/master/mapping.go
 
 let padding: Character = "\u{2615}" // "☕"
 let padding40: Character = "\u{269C}" // "⚜️"

@@ -45,6 +45,7 @@ do {
 ## TODO:
 - [x] Decode/Encode
 - [x] Tests
+- [ ] Linux compatibility
 - [ ] swift package manager
 - [ ] cocoa pod
 
