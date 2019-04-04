@@ -1,6 +1,6 @@
 # Ecoji-Swift
 
-A Swift implementation of the [Ecoji](https://github.com/keith-turner/ecoji) encoding standard.
+A Swift 5 implementation of the [Ecoji](https://github.com/keith-turner/ecoji) encoding standard.
 
 Provides a library for encoding and decoding data as a base-1024 sequence of emojis
 
@@ -39,17 +39,23 @@ do {
 }
 ```
 
+## TODO:
+- [x] Decode/Encode
+- [x] Tests
+- [ ] swift package manager
+- [ ] cocoa pod
+
+## Contribution
+
+PRs welcome!
+
+check test cases with  `swift test`
+
 ## License
 
-Like the Rust implementation this program is licensed under either of
+Like the [rust implementation](https://github.com/netvl/ecoji.rs) this program is licensed under either of
 
  * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
  * MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
 
 at your option.
-
-### Contribution
-
-PRs welcome!
-
-check test cases with  `swift test`
