@@ -2,11 +2,6 @@ import Foundation
 
 // Adapted from https://github.com/keith-turner/ecoji/blob/master/docs/encoding.md
 
-public enum EncodingError: Error {
-    case UnexpectedEndOfInput
-    case InvalidCharacter(found: Character)
-}
-
 public class EcojiEncoder {
     public init() {}
     
