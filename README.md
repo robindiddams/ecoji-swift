@@ -9,6 +9,8 @@ Provides a library for encoding and decoding data as a base-1024 sequence of emo
 Works a lot like a JSONEncoder/Decoder
 
 ### Encoding
+
+Encode is implemented for Data or String inputs
 ```swift
 import Ecoji
 let encoder = EcojiEncoder()
@@ -17,6 +19,7 @@ print(emojiString)
 // "🏯🔩🚗🌷🍉👇🦒🕊👡📢☕☕"
 ```
 ### Decoding
+You can decode into Data like this:
 ```swift
 let decoder = EcojiDecoder()
 do {
