@@ -21,7 +21,43 @@ final class EcojiTests: XCTestCase {
         let output = try decoder.decode(string: "🏯🔩🚗🌷🍉👇🦒🕊👡📢☕☕")
         XCTAssertEqual(String(decoding: output, as: UTF8.self), "Hello World!")
     }
-
+    
+    func testDecodeString() throws {
+        let decoder = EcojiDecoder()
+        let output = try decoder.decodeToString(string: "🏯🔩🚗🌷🍉👇🦒🕊👡📢☕☕")
+        XCTAssertEqual(output, "Hello World!")
+    }
+    
+    func testDecodeDataWithBadEmoji() throws {
+        let decoder = EcojiDecoder()
+        do {
+            let _ = try decoder.decode(string: "🏯🔩🚗🌷🍉👇🦒🕊👡🏴‍☠️☕☕")
+            XCTFail()
+        } catch let err as DecodingError {
+            switch err {
+            case .UnexpectedEndOfInput:
+                XCTFail()
+            case .InvalidCharacter(let found):
+                XCTAssertEqual(found, "🏴‍☠️")
+            }
+        }
+    }
+    
+    func testDecodeDataWithBadLength() throws {
+        let decoder = EcojiDecoder()
+        do {
+            let _ = try decoder.decode(string: "🏯🔩🚗🌷🍉👇🦒🕊👡📢☕")
+            XCTFail()
+        } catch let err as DecodingError {
+            switch err {
+            case .UnexpectedEndOfInput:
+                break
+            case .InvalidCharacter(_):
+                XCTFail()
+            }
+        }
+    }
+        
     /// Returns path to the built products directory.
     var productsDirectory: URL {
       #if os(macOS)
@@ -35,6 +71,11 @@ final class EcojiTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testEncodeString", testEncodeString)
+        ("testEncodeString", testEncodeString),
+        ("testEncodeData", testEncodeData),
+        ("testDecodeString", testDecodeString),
+        ("testEncodeData", testDecodeData),
+        ("testEncodeData", testDecodeDataWithBadEmoji),
+        ("testEncodeData", testDecodeDataWithBadLength),
     ]
 }
