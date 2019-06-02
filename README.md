@@ -1,11 +1,17 @@
 # Ecoji-Swift
 
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Ecoji.svg?style=flat&label=CocoaPods&colorA=28a745&&colorB=4E4E4E)](https://cocoapods.org/pods/CryptoSwift)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Ecoji.svg?style=flat&label=CocoaPods&colorA=28a745&&colorB=4E4E4E)](https://cocoapods.org/pods/Ecoji)
 [![Swift Package Manager compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg?style=flat&colorA=28a745&&colorB=4E4E4E)](https://github.com/apple/swift-package-manager)
 
 A Swift 5 implementation of the [Ecoji](https://github.com/keith-turner/ecoji) encoding standard.
 
 Provides a library for encoding and decoding data as a base-1024 sequence of emojis
+
+## Install
+
+```
+  pod 'Ecoji'
+```
 
 ## Usage
 
