@@ -7,6 +7,8 @@ A Swift 5 implementation of the [Ecoji](https://github.com/keith-turner/ecoji) e
 
 Provides a library for encoding and decoding data as a base-1024 sequence of emojis
 
+Visit [ecoji.io](https://ecoji.io) to try Ecoji in your browser.
+
 ## Install
 
 ```
